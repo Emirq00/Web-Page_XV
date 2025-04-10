@@ -59,7 +59,7 @@
   transform: 
     translate(50%) 
     rotate(20deg); 
-  overflow: visible!important;  
+  
   /* background-color: white; */
   transform-origin: top right;
   z-index: 0;
@@ -84,34 +84,27 @@
     reveal 12s linear infinite;
   animation-delay: calc(var(--i)*4s);
   z-index: 0;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  /* clip-path: polygon(0 0, 0 0, 0 0, 0 0); */
+  
   aspect-ratio: 1/1;
-  will-change: transform, opacity;
-  transform-origin: left center; 
-  transform-origin: right center; 
+  will-change: transform;
+  
 }
 
 @keyframes reveal {
   0% {
     clip-path: inset(0 0 100% 0); 
   }
-  60%{
-    clip-path: inset(0 0 100% 0);
+  5%{
+    clip-path: inset(0 0 30% 0); 
   }
-  68%{
-    clip-path: inset(0 0 80% 0);
+  10%{
+    clip-path: inset(0 0 2% 0); 
   }
-  70%{
-    clip-path: inset(0 0 60% 0);
-  }
-  72%{
-    clip-path: inset(0 0 40% 0);
-  }
-  75%{
-    clip-path: inset(0 0 10% 0);
-  }
-  76%{
-    clip-path: inset(0 0 0% 0);
+  11%{
+    clip-path: inset(0 0 1% 0); 
   }
   100% {
     clip-path: inset(0 0 0 0);
@@ -132,8 +125,9 @@
   width: 20%;
   height: auto;
   max-height: 100%;
-  z-index: 2;
+  object-fit: contain;
   filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+  z-index: 1;
 }
 .b1 { bottom:40% ;left: 20%; }
 .b2 {bottom:20% ;left: 57%; width: 15%;}
