@@ -30,12 +30,12 @@ const CountDownTimer = ({targetDate}) =>{
     return(
         <div className="countdown-container">
             <div className="time-box">
-                <span className="imperial-script-regular" style={{fontSize:'8vw'}}>Solo faltan:</span>
+                <span className="timer">Solo faltan:</span>
                 <br/>
-                <span className="imperial-script-regular" style={{fontSize:'8vw'}}>{padNumber(timeLeft.days || 0)}</span>
-                <span className="imperial-script-regular" style={{fontSize:'8vw'}}> : {padNumber(timeLeft.hours || 0)}</span>
-                <span className="imperial-script-regular" style={{fontSize:'8vw'}}> : {padNumber(timeLeft.minutes || 0)}</span>
-                <span className="imperial-script-regular" style={{fontSize:'8vw'}}> : {padNumber(timeLeft.seconds || 0)}</span>
+                <span className="timer" >{padNumber(timeLeft.days || 0)}</span>
+                <span className="timer" > : {padNumber(timeLeft.hours || 0)}</span>
+                <span className="timer"> : {padNumber(timeLeft.minutes || 0)}</span>
+                <span className="timer"> : {padNumber(timeLeft.seconds || 0)}</span>
             </div>
             <div className="time-box">
                 <span className="imperial-script-regular" style={{fontSize:'4vw', padding:'2vw'}}>Días </span>
