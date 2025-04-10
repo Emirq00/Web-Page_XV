@@ -30,7 +30,7 @@ const CountDownTimer = ({targetDate}) =>{
     return(
         <div className="countdown-container">
             <div className="time-box">
-                <span className="imperial-script-regular">Solo faltan:</span>
+                <span className="imperial-script-regular" style={{fontSize:'8vw'}}>Solo faltan:</span>
                 <br/>
                 <span className="imperial-script-regular" style={{fontSize:'8vw'}}>{padNumber(timeLeft.days || 0)}</span>
                 <span className="imperial-script-regular" style={{fontSize:'8vw'}}> : {padNumber(timeLeft.hours || 0)}</span>
