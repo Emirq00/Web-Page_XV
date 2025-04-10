@@ -59,7 +59,7 @@
   transform: 
     translate(50%) 
     rotate(20deg); 
-    
+  overflow: visible!important;  
   /* background-color: white; */
   transform-origin: top right;
   z-index: 0;
@@ -83,31 +83,36 @@
     slide 12s linear infinite,
     reveal 12s linear infinite;
   animation-delay: calc(var(--i)*4s);
-  z-index: 2;
+  z-index: 0;
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   aspect-ratio: 1/1;
+  will-change: transform, opacity;
+  transform-origin: left center; 
+  transform-origin: right center; 
 }
 
 @keyframes reveal {
   0% {
     clip-path: inset(0 0 100% 0); 
   }
-  10%{
+  60%{
     clip-path: inset(0 0 100% 0);
   }
-  12%{
-    clip-path: inset(0 0 90% 0);
-  }
-  14%{
+  68%{
     clip-path: inset(0 0 80% 0);
   }
-  16%{
+  70%{
     clip-path: inset(0 0 60% 0);
   }
-  27%{
+  72%{
+    clip-path: inset(0 0 40% 0);
+  }
+  75%{
+    clip-path: inset(0 0 10% 0);
+  }
+  76%{
     clip-path: inset(0 0 0% 0);
   }
-
   100% {
     clip-path: inset(0 0 0 0);
   }
@@ -115,10 +120,10 @@
 
 @keyframes slide{
   0%{
-    transform: translate(-220%, 400%); 
+    transform: translate(-220%, 335%);
   }
   100%{
-    transform: translate(-220%, -200%);
+    transform: translate(-200%, -850%);
   }
 }
 
