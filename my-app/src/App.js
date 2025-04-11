@@ -1,25 +1,19 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import CountdownTimer from "./CountDownTimer";
 import './App.css';
+import {BrowserRouter as Router, Routes, Route, Link, href, createBrowserRouter, RouterProvider} from 'react-router-dom'
+import Ubicacion from './pages/Ubicacion';
 
 
 
-const Button = ({ children, onClick }) => (
-  <button
-    className="responsive-btn"
-    onClick={onClick}
-  >
+const Button = ({ to, children }) => (
+  
+  <Link to ={to} className='responsive-btn'>
     {children}
-  </button>
+  </Link>
 );
 
-
-
-
-
-
-function App() {
-
+const HomePage = () =>{
   const targetDate = "2025-06-28T19:30:00";
 
   const images=[
@@ -30,7 +24,9 @@ function App() {
 
 
   return (
+      
     <div className="App">
+
       <h1 className='title'>Mis XV años</h1>
       <h1 className='name'>Salma Quezada
         <br/>
@@ -69,7 +65,8 @@ function App() {
             <img src='/ImagenesInvitacion/Boletos.png' alt='Ticket-Icon' className='image icons'/>
           </div>
           <div className='names'>
-            <Button variant='primary' onClick={()=>console.log("click")}>Ubicación</Button>
+            
+            <Button variant='primary' to='/ubicacion'>Dónde y cuándo</Button>
             <Button variant='primary' onClick={()=>console.log("click")}>Itinerario</Button>
             <Button variant='primary' onClick={()=>console.log("click")}>DressCode</Button>
             <Button variant='primary' onClick={()=>console.log("click")}>Misa</Button>
@@ -97,10 +94,20 @@ function App() {
       <h1 className='Font1-Prayer'>Confirma tu asistencia lo antes posible</h1>
 
     </div>
-    
-    
-
   );
+}
+
+
+function App() {
+  return(
+    <Router>
+      <Routes>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='/ubicacion' element={<Ubicacion/>}/>
+      </Routes>
+    </Router>
+  )
+  
 }
 
 export default App;
