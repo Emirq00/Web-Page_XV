@@ -80,21 +80,15 @@
     position: absolute;
     width: 30%;
     height: 30%;
-    
-    /* 1) Oculta la imagen desde el arranque */
     clip-path: inset(0 0 100% 0);
-  
-    /* 2) Configura la animación en varias propiedades (más claro) */
     animation-name: slide, reveal;
     animation-duration: 12s, 12s;
     animation-timing-function: linear, linear;
     animation-delay: calc(var(--i)*4s), calc(var(--i)*4s);
     animation-iteration-count: infinite, infinite;
     animation-fill-mode: backwards, backwards;
-    transform: translateZ(0); 
+    transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
-    
-  
     z-index: 0;
     aspect-ratio: 1/1;
     will-change: transform, opacity;
@@ -102,16 +96,16 @@
   
 
   @keyframes reveal {
-    0% {
+    0%,100% {
       clip-path: inset(0 0 100% 0); 
     }
     5%{
       clip-path: inset(0 0 20% 0); 
     }
-    10%{
+    7%{
       clip-path: inset(0 0 2% 0); 
     }
-    100% {
+    70% {
       clip-path: inset(0 0 0 0);
     }
   }

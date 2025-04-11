@@ -3,7 +3,10 @@ import CountdownTimer from "./CountDownTimer";
 import './App.css';
 import {BrowserRouter as Router, Routes, Route, Link, href, createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Ubicacion from './pages/Ubicacion';
-
+import Itinerario from './pages/Itinerario';
+import DressCode from './pages/DressCode';
+import Church from './pages/Misa';
+import Tickets from './pages/Boletos';
 
 
 const Button = ({ to, children }) => (
@@ -66,11 +69,11 @@ const HomePage = () =>{
           </div>
           <div className='names'>
             
-            <Button variant='primary' to='/ubicacion'>Dónde y cuándo</Button>
-            <Button variant='primary' onClick={()=>console.log("click")}>Itinerario</Button>
-            <Button variant='primary' onClick={()=>console.log("click")}>DressCode</Button>
-            <Button variant='primary' onClick={()=>console.log("click")}>Misa</Button>
-            <Button variant='primary' onClick={()=>console.log("click")}>Boletos</Button>
+            <Button variant='primary' to='/Address'>Dónde y cuándo</Button>
+            <Button variant='primary' to='/Itinerary'>Itinerario</Button>
+            <Button variant='primary' to='/DressCode'>DressCode</Button>
+            <Button variant='primary' to='/Church'>Misa</Button>
+            <Button variant='primary' to='/Tickets'>Boletos</Button>
           </div>
 
         </div>
@@ -103,7 +106,11 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element={<HomePage/>}/>
-        <Route path='/ubicacion' element={<Ubicacion/>}/>
+        <Route path='/Address' element={<Ubicacion/>}/>
+        <Route path='/Itinerary' element={<Itinerario/>}/>
+        <Route path='/DressCode' element={<DressCode/>}/>
+        <Route path='/Church' element={<Church/>}/>
+        <Route path='/Tickets' element={<Tickets/>}/>
       </Routes>
     </Router>
   )
