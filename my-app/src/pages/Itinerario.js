@@ -84,7 +84,8 @@ const ProgressBar = () => {
   }, []);
 
 
-  const lineHeight = scrollPercent > 95 ? 95 : scrollPercent;
+  const maxBarHeight = isMobile ? 95 : 100;
+  const lineHeight = scrollPercent > maxBarHeight ? maxBarHeight : scrollPercent;
 
   return (
     <div className="progress-container">
