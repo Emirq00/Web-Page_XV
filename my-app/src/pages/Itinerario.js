@@ -104,6 +104,7 @@ const Itinerario = () => {
       <h1 className="Title_Itinerario">Te compartimos los detalles de la celebración:</h1>
       
       <div className="content">
+        <img src="/ImagenesInvitacion/SlideIcon.png" alt="Slide icon" className="Image_Itinerario"/>
         <ProgressBar/>
       </div>
 

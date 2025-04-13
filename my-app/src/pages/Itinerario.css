@@ -14,7 +14,7 @@
 .Title_Itinerario{
     position: absolute;
     font-family: 'Inika';
-    font-size: clamp(2rem, 5vw, 5rem);
+    font-size: clamp(1.7rem, 5vw, 5rem);
     color: #7C7121;
     margin: 1em;
     display: flex;
@@ -39,16 +39,18 @@
 
   @media only screen and (max-width: 768px) {
     .progress-container {   
-      top: 10%;
+      top: 20%;
     }   
     .button-back{
-        top:90%;
+        top:95%;
     }
+
+
   }
   
   @media only screen and (max-width: 1024px) {
     .progress-container {   
-      top:10%;
+      top:15%;
     }
     
   }
@@ -141,7 +143,7 @@
   .button-back{
     position: absolute;
     bottom: 5%;
-    right: 10%;
+    right: 5%;
   }
 
   .responsive-btn-Itinerario {
@@ -157,3 +159,19 @@
     align-items: center;
     justify-content: center;
   } 
+
+  .Image_Itinerario{
+    aspect-ratio: 1/1;
+    width: 15%;
+    position: absolute;
+    left: 43%;
+    top: 7%;
+    object-fit: cover;
+    display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+    .Image_Itinerario{
+      display: none;
+    }
+  }
