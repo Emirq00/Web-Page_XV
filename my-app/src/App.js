@@ -7,6 +7,7 @@ import Itinerario from './pages/Itinerario';
 import DressCode from './pages/DressCode';
 import Church from './pages/Misa';
 import Tickets from './pages/Boletos';
+import ScrollToTop from './ScrollToTop';
 
 
 const Button = ({ to, children }) => (
@@ -104,6 +105,7 @@ const HomePage = () =>{
 function App() {
   return(
     <Router>
+      <ScrollToTop/>
       <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path='/Address' element={<Ubicacion/>}/>

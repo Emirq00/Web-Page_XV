@@ -6,7 +6,7 @@ import ExternalButton from "./ExternalButton";
 
 
 const Button = ({ to, children }) => (
-    <Link to ={to} className='responsive-btn'>
+    <Link to ={to} className='responsive-btn-Itinerario'>
       {children}
     </Link>
   );

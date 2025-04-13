@@ -6,7 +6,7 @@ const ExternalButton = ({ url, children }) => (
     href={url}
     target="_blank"
     rel="noopener noreferrer"
-    className="responsive-btn"
+    className="responsive-btn-Itinerario"
   >
     {children}
   </a>
