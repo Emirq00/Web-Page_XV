@@ -173,7 +173,7 @@
   }
 
   .responsive-btn {
-    width:clamp(65px, 15vw, 890px);
+    width:clamp(50px, 15vw, 850px);
     padding: clamp(4px, 1vw, 70px);
     font-size: clamp(6px, 2.5vw, 30px);
     background: #7C7121;

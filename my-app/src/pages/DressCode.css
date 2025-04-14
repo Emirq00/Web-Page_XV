@@ -1,0 +1,99 @@
+.Main-page-DressCode{
+    text-align: center;
+    background-image: url(/public/ImagenesInvitacion/FotoChida.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem 0; 
+}
+
+.Marco{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}   
+.Frame-up{
+    width: clamp(200px, 90%, 700px);
+}
+
+.Frame-down{
+    width: clamp(200px, 90%, 700px);
+    transform: rotate(180deg); 
+}
+
+.Container_text{
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    text-align: center;
+}
+
+.Text_DressCode{
+    font-family: 'Imperial Script', cursive;
+    font-size: clamp(4rem, 12vw, 6rem);
+    color: #7C7121;
+    text-align: center;
+    font-weight: bold;
+    /* padding: 2rem 2rem 0; */
+    /* margin-bottom: -2rem; */
+}
+
+.Images-DressCode{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Icons-DressCode{
+    width: clamp(150px, 30%, 650px);
+    padding-bottom: 2em;
+}   
+
+@media only screen and (min-width:1024px) {
+    .Icons-DressCode{
+        width: 350px;
+    }
+}
+
+.responsive-btn-DressCode {
+    width:clamp(120px, 16vw, 890px);
+    padding: clamp(4px, 1vw, 70px);
+    font-size: clamp(16px, 3vw, 30px);
+    background: #7C7121;
+    color: white;
+    border-radius:15%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } 
+
+  .Button-DressCode{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+  }
+
+
+  .Main-page-DressCode {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image {
+    display: block;
+    max-width: 100%;
+  }
+  
+  .Icons-DressCode {
+    margin: 0 15px;
+    cursor: pointer;
+  }

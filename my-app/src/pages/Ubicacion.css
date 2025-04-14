@@ -64,12 +64,13 @@
     font-size: clamp(1rem, 4vw, 2rem);
     color: #7C7121;
     margin: auto;
+    padding: 2em;
 }
 
-.responsive-btn {
-    width:clamp(65px, 15vw, 890px);
+.responsive-btn-Ubicacion {
+    width:clamp(150px, 18vw, 890px);
     padding: clamp(4px, 1vw, 70px);
-    font-size: clamp(6px, 2.5vw, 30px);
+    font-size: clamp(20px, 4vw, 30px);
     background: #7C7121;
     color: white;
     border-radius:15%;
@@ -78,5 +79,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
   } 
+
+.image {
+    transition: transform 0.3s ease;
+  }
+  
+  .Title, .Details {
+    will-change: transform, opacity;
+  }

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import './Itinerario.css';
+import { motion } from "framer-motion";
+
+
 
 const progressItems = [
   {
@@ -42,18 +45,22 @@ const progressItems = [
 ];
 
 const Button = ({ to, children }) => (
-  <Link to={to} className='responsive-btn-Itinerario'>
-    {children}
-  </Link>
+  <motion.div
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    <Link to={to} className='responsive-btn-Itinerario'>
+      {children}
+    </Link>
+  </motion.div>
 );
-
 const ProgressBar = () => {
   const [scrollPercent, setScrollPercent] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 1024);
     };
     handleResize();
     window.addEventListener('resize', handleResize);
@@ -114,14 +121,41 @@ const ProgressBar = () => {
 const Itinerario = () => {
   return (
     <div className="Main-page_Itinerario">
-      <h1 className="Title_Itinerario">Te compartimos los detalles de la celebración:</h1>
+      <motion.h1 
+        className="Title_Itinerario"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        Te compartimos los detalles de la celebración:
+      </motion.h1>
+
       <div className="content">
-        <img src="/ImagenesInvitacion/SlideIcon.png" alt="Slide icon" className="Image_Itinerario" />
+      <motion.img 
+        src="/ImagenesInvitacion/SlideIcon.png" 
+        alt="Slide icon" 
+        className="Image_Itinerario"
+        animate={{
+          y: [0, 25, 0], 
+          opacity: [1, 0.8, 1] 
+        }}
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
         <ProgressBar />
       </div>
-      <div className="button-back">
+
+      <motion.div 
+        className="button-back"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+      >
         <Button to='/'>Regresar</Button>
-      </div>
+      </motion.div>
     </div>
   );
 };

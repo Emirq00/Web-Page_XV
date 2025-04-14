@@ -8,6 +8,7 @@ import DressCode from './pages/DressCode';
 import Church from './pages/Misa';
 import Tickets from './pages/Boletos';
 import ScrollToTop from './ScrollToTop';
+import { AnimatePresence } from 'framer-motion';
 
 
 const Button = ({ to, children }) => (
@@ -106,6 +107,7 @@ function App() {
   return(
     <Router>
       <ScrollToTop/>
+      <AnimatePresence mode='wait'>
       <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path='/Address' element={<Ubicacion/>}/>
@@ -114,6 +116,7 @@ function App() {
         <Route path='/Church' element={<Church/>}/>
         <Route path='/Tickets' element={<Tickets/>}/>
       </Routes>
+      </AnimatePresence>
     </Router>
   )
   
