@@ -60,7 +60,7 @@ const ProgressBar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1024);
+      setIsMobile(window.innerWidth <= 1025);
     };
     handleResize();
     window.addEventListener('resize', handleResize);
@@ -69,7 +69,7 @@ const ProgressBar = () => {
 
 
   const adjustedProgressItems = progressItems.map((item, index) => {
-    if (index === progressItems.length - 1) {
+    if (index === progressItems.length - 1 && isMobile) {
       return { ...item, threshold: 95 };
     }
     return item;
