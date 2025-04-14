@@ -177,3 +177,69 @@
   }
 
   
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+  .Main-page_Itinerario {
+    height: 400vh; 
+  }
+
+  .progress-container {
+    height: 85%; 
+    top: 12%;
+  }
+
+  .progress-item {
+    width: 40vw; 
+  }
+
+  .progress-content {
+    width: clamp(100px, 35vw, 200px); 
+    left: 25px;
+    top: -15px;
+  }
+
+  .progress-item.left .progress-content {
+    right: calc(50% + 15px);
+    transform: translateY(-50%) translateX(-15px);
+  }
+
+  .progress-item.right .progress-content {
+    left: calc(50% + 15px);
+    transform: translateY(-50%) translateX(15px);
+  }
+
+  .progress-content h4 {
+    font-size: clamp(14px, 3vw, 24px); 
+  }
+
+  .progress-content p {
+    font-size: clamp(12px, 2.5vw, 20px);
+  }
+
+  .Image_Itinerario {
+    width: 12%;
+    left: 44%;
+    top: 8%;
+  }
+}
+
+
+.progress-item {
+  margin: 3vh 0; 
+}
+
+.progress-content {
+  transform: translateY(-50%); 
+}
+
+
+@media only screen and (max-width: 768px) {
+  .progress-container {
+    height: 75%;
+    top: 18%;
+  }
+
+  .progress-content {
+    width: clamp(100px, 40vw, 180px);
+  }
+}
+  
