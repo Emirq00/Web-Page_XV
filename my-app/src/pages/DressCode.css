@@ -52,7 +52,7 @@
 }
 
 .Icons-DressCode{
-    width: clamp(150px, 30%, 650px);
+    width: clamp(125px, 30%, 650px);
     padding-bottom: 2em;
 }   
 

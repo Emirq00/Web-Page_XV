@@ -3,7 +3,7 @@
     background-image: url(/public/ImagenesInvitacion/FotoChida.png);
     background-size: cover;
     background-position: center;
-    min-height: 200vh;
+    min-height: 150vh;
     height: auto;
     image-rendering: crisp-edges;
     position: relative;

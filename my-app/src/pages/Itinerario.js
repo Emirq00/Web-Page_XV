@@ -69,7 +69,7 @@ const ProgressBar = () => {
 
 
   const adjustedProgressItems = progressItems.map((item, index) => {
-    if (index === progressItems.length - 1 && isMobile) {
+    if (index === progressItems.length - 1) {
       return { ...item, threshold: 95 };
     }
     return item;

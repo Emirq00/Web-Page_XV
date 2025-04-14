@@ -1,0 +1,79 @@
+.Main-page-Misa{
+    text-align: center;
+    background-image: url(/public/ImagenesInvitacion/FotoChida.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem 0; 
+}
+
+.responsive-btn-Misa{
+    width:clamp(150px, 18vw, 890px);
+    padding: clamp(4px, 1vw, 70px);
+    font-size: clamp(20px, 4vw, 30px);
+    background: #7C7121;
+    color: white;
+    border-radius:15%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Church-1{
+    width: clamp(250px, 45vw, 800px);
+    position: relative;
+}
+
+.Church-2{
+    width: clamp(250px, 45vw, 800px);
+    position: relative;
+}
+
+
+.Container-Images-Misa{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media(max-width: 766px){
+    .Container-Images-Misa{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .Church-2{
+        margin-top: 3em;
+    }
+}
+
+.Title-Misa{
+    position: relative;
+    font-family: 'Inika';
+    font-size: clamp(1rem, 8vw, 4rem);
+    color: #7C7121;
+}
+
+.Details-Misa{
+    position: relative;
+    font-family: 'Inika';
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    color: #7C7121;
+    margin: auto;
+    padding: 2em;
+}
+
+.Container-Title-Details-Misa{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 2em;
+    text-align: center;
+}

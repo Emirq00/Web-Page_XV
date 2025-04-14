@@ -3,7 +3,6 @@ import './DressCode.css';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from "framer-motion";
 
-// Configuración de animaciones reutilizables
 const pageVariants = {
   initial: { opacity: 0, y: 50 },
   animate: { opacity: 1, y: 0 },

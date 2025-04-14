@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 import './Ubicacion.css';
 import { Link } from 'react-router-dom';
 import ExternalButton from "./ExternalButton";
@@ -9,7 +9,7 @@ const imageVariants = {
   visible: { 
     opacity: 1, 
     x: 0,
-    transition: { type: "spring", stiffness: 120 }
+    transition: { type: "spring", stiffness: 120, delay:0.5 }
   }
 };
 
@@ -46,7 +46,7 @@ const Ubicacion = () => {
         className="Images"
         initial="hidden"
         animate="visible"
-        transition={{ staggerChildren: 0.2 }}
+        transition={{ staggerChildren: 0.9 }}
       >
         <motion.img 
           src="/ImagenesInvitacion/FotoSalon.jpg" 
