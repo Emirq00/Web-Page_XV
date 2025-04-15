@@ -10,7 +10,7 @@
     min-height: 100vh;
     height: auto;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -19,8 +19,9 @@
 
 .dropdown-container {
     position: relative;
-    width: clamp(25vw, 50vw, 80vw);
+    width: clamp(35vw, 59vw, 80vw);
     margin-left: 2em;
+    z-index: 4;
   }
   
   .dropdown-button {
@@ -44,19 +45,24 @@
     background:#7C7121;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    z-index: 1;
+    z-index: 3;
     padding: 1em;
+    max-height: 30vh;
     transform: translateX(-2em);
     max-height: clamp(8em, 10em, 15em);
     overflow-y: auto; 
-    scrollbar-width: thin; 
+    scroll-behavior: smooth;
+    scrollbar-width: thick; 
     scrollbar-color: #968b3b #7C7121; 
+    overscroll-behavior: contain;
   }
   
   .dropdown-item {
     padding: 10px;
     cursor: pointer;
-    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
   }
   
   .dropdown-item:hover {
@@ -65,7 +71,7 @@
 
   .dropdown-button,
 .dropdown-item {
-  font-size: clamp(0.8rem, 2vw, 2rem); 
+  font-size: clamp(1rem, 2vw, 2rem); 
   color: #ffffff; 
   text-align: left; 
 }
@@ -82,7 +88,7 @@
   }
 
 .dropdown-list::-webkit-scrollbar {
-    width: 8px;
+    width: 12px;
   }
   
   .dropdown-list::-webkit-scrollbar-track {
@@ -134,15 +140,16 @@
 
 .tickets-info{
     font-family: 'Inika';
-    font-size: clamp(1rem, 5vw, 3rem);
+    font-size: clamp(1.5rem, 5vw, 3rem);
     color: #7C7121;
     padding: 1em;
+    text-align: left;
 }
 
 .mensaje-boletos{
     font-family: 'Inika';
-    font-size: clamp(1rem, 5vw, 3rem);
+    font-size: clamp(1.5rem, 5vw, 3rem);
     color: #7C7121;
     padding: 1em;
-    
+    text-align: justify;
 }

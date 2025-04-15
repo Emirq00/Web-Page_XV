@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import './Boletos.css'
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from "framer-motion";
+import { label } from "framer-motion/client";
 
 const message='Su majestad Salma, solicita su presencia en la celebración de su XV aniversario. Una noche mágica en su honor.'
 
@@ -20,11 +21,19 @@ const Dropdown = ({selectedOption, setSelectedOption}) => {
     const [isOpen, setIsOpen] = useState(false);
   
     const options = [
-      { value: 'Hola', label: 'Familia Perez Quezada', boletos:2, mensaje:message},
-      { value: 'opcion2', label: 'Familia Santoyo Quezada', boletos:3, mensaje:message},
-      { value: 'opcion3', label: 'Familia Trujillo Quezada', boletos:3, mensaje:message},
-      { value: 'opcion4', label: 'Familia Quezada Romero', boletos:3, mensaje:message},
-      { value: 'opcion5', label: 'Familia Lopez Quezada', boletos:3, mensaje:message},
+      { value: 'opcion1', label: 'Familia Pérez Quezada', boletos:'4 personas', mensaje:message},
+      { value: 'opcion2', label: 'Familia Santoyo Quezada', boletos:'4 personas', mensaje:message},
+      { value: 'opcion3', label: 'Familia Trujillo Quezada', boletos:'5 personas', mensaje:message},
+      { value: 'opcion4', label: 'Familia Quezada Romero', boletos:'5 personas', mensaje:message},
+      { value: 'opcion5', label: 'Familia Lopez Quezada', boletos:'6 personas', mensaje:message},
+      { value: 'opcion6', label: 'Familia Gómez Garza', boletos:'4 personas', mensaje:message},
+      { value: 'opcion7', label: 'Familia Rebollo Olivares', boletos:'5 personas y 1 niño', mensaje:message},
+      { value: 'opcion8', label: 'Familia Sánchez Olivares', boletos:'7 personas', mensaje:message},
+      { value: 'opcion9', label: 'Familia Olivares Armenta', boletos:'4 personas', mensaje:message},
+      { value: 'opcion10', label: 'Familia Quezada González', boletos: '2 personas', mensaje:message},
+      { value: 'opcion11', label: 'Familia Alvarado Ortiz', boletos: '7 personas', mensaje:message},
+      { value: 'opcion12', label: 'Familia Olivares García', boletos: '4 personas y 1 niño', mensaje:message},
+      { value: 'opcion13', label: 'Familia Pérez González', boletos: '7 personas y 4 niños', mensaje:message},
     ];
   
     const toggleDropdown = () => setIsOpen(!isOpen);
@@ -53,6 +62,7 @@ const Dropdown = ({selectedOption, setSelectedOption}) => {
                 className="dropdown-item"
                 onClick={() => handleOptionClick(option)}
                 role="option"
+                aria-selected={selectedOption?.value === option.value}
               >
                 {option.label}     
               </li>
