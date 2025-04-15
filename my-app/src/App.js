@@ -24,10 +24,10 @@ const HomePage = () =>{
   const [showWelcome, setShowWelcome] = useState(true);
 
   useEffect(() => {
-    // const hasSeenWelcome = localStorage.getItem('hasSeenWelcome');
-    // if (hasSeenWelcome) {
-    //   setShowWelcome(false);
-    // }
+    const hasSeenWelcome = localStorage.getItem('hasSeenWelcome');
+    if (hasSeenWelcome) {
+      setShowWelcome(false);
+    }
   }, []);
 
   const handleCloseWelcome = () => {
