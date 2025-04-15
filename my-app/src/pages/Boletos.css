@@ -1,0 +1,148 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+.Main-page-Boletos{
+    text-align: center;
+    background-image: url(/public/ImagenesInvitacion/FotoChida.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem 0; 
+}
+
+.dropdown-container {
+    position: relative;
+    width: clamp(25vw, 50vw, 80vw);
+    margin-left: 2em;
+  }
+  
+  .dropdown-button {
+    width: 100%;
+    padding: clamp(0.5em, 0.7em, 1.5em);
+    background: #7C7121;
+    border: 1px solid #7C7121;
+    border-radius: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .dropdown-list {
+    position: absolute;
+    width: 100%;
+    left: 2em;
+    margin: 5px 0 0 0;
+    list-style: none;
+    background:#7C7121;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1;
+    padding: 1em;
+    transform: translateX(-2em);
+    max-height: clamp(8em, 10em, 15em);
+    overflow-y: auto; 
+    scrollbar-width: thin; 
+    scrollbar-color: #968b3b #7C7121; 
+  }
+  
+  .dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    padding: 1em;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #7C7121;
+  }
+
+  .dropdown-button,
+.dropdown-item {
+  font-size: clamp(0.8rem, 2vw, 2rem); 
+  color: #ffffff; 
+  text-align: left; 
+}
+
+.dropdown-button::after {
+    content: "▼";
+    font-size: 1em;
+    margin-left: 2em;
+    transition: transform 0.3s ease;
+  }
+  
+  .dropdown-container[data-open="true"] .dropdown-button::after {
+    transform: rotate(180deg);
+  }
+
+.dropdown-list::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .dropdown-list::-webkit-scrollbar-track {
+    background: #7C7121;
+    border-radius: 0 10px 10px 0;
+  }
+  
+  .dropdown-list::-webkit-scrollbar-thumb {
+    background: #968b3b;
+    border-radius: 10px;
+  }
+
+  .Container-Boletos{
+    width: clamp(200px, 90vw, 1300px); 
+    min-height: 80vh;
+    position: relative; 
+    margin: 6rem auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 0.25em solid #7C7121;
+  }
+
+  .Font1-Boletos{
+    font-family: 'Imperial Script', cursive;
+    font-size: clamp(1.8rem, 11vw, 6rem);
+    text-align: center;
+    font-weight: bold;
+    padding: 2rem 1rem 0;
+    margin-bottom: -2rem;
+    color: #7C7121;
+  }
+
+
+.selected-family {
+    font-family: 'Inika';
+    font-size: clamp(1rem, 8vw, 4rem);
+    color: #7C7121;
+    padding: 1em;
+}
+    
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tickets-info{
+    font-family: 'Inika';
+    font-size: clamp(1rem, 5vw, 3rem);
+    color: #7C7121;
+    padding: 1em;
+}
+
+.mensaje-boletos{
+    font-family: 'Inika';
+    font-size: clamp(1rem, 5vw, 3rem);
+    color: #7C7121;
+    padding: 1em;
+    
+}
