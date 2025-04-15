@@ -17,90 +17,6 @@
     padding: 3rem 0; 
 }
 
-.dropdown-container {
-    position: relative;
-    width: clamp(35vw, 59vw, 80vw);
-    margin-left: 2em;
-    z-index: 4;
-  }
-  
-  .dropdown-button {
-    width: 100%;
-    padding: clamp(0.5em, 0.7em, 1.5em);
-    background: #7C7121;
-    border: 1px solid #7C7121;
-    border-radius: 10px;
-    cursor: pointer;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .dropdown-list {
-    position: absolute;
-    width: 100%;
-    left: 2em;
-    margin: 5px 0 0 0;
-    list-style: none;
-    background:#7C7121;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    z-index: 3;
-    padding: 1em;
-    max-height: 30vh;
-    transform: translateX(-2em);
-    max-height: clamp(8em, 10em, 15em);
-    overflow-y: auto; 
-    scroll-behavior: smooth;
-    scrollbar-width: thick; 
-    scrollbar-color: #968b3b #7C7121; 
-    overscroll-behavior: contain;
-  }
-  
-  .dropdown-item {
-    padding: 10px;
-    cursor: pointer;
-    width: 100%;
-    box-sizing: border-box;
-    display: block;
-  }
-  
-  .dropdown-item:hover {
-    background-color: #7C7121;
-  }
-
-  .dropdown-button,
-.dropdown-item {
-  font-size: clamp(1rem, 2vw, 2rem); 
-  color: #ffffff; 
-  text-align: left; 
-}
-
-.dropdown-button::after {
-    content: "▼";
-    font-size: 1em;
-    margin-left: 2em;
-    transition: transform 0.3s ease;
-  }
-  
-  .dropdown-container[data-open="true"] .dropdown-button::after {
-    transform: rotate(180deg);
-  }
-
-.dropdown-list::-webkit-scrollbar {
-    width: 12px;
-  }
-  
-  .dropdown-list::-webkit-scrollbar-track {
-    background: #7C7121;
-    border-radius: 0 10px 10px 0;
-  }
-  
-  .dropdown-list::-webkit-scrollbar-thumb {
-    background: #968b3b;
-    border-radius: 10px;
-  }
-
   .Container-Boletos{
     width: clamp(200px, 90vw, 1300px); 
     min-height: 80vh;
@@ -152,4 +68,109 @@
     color: #7C7121;
     padding: 1em;
     text-align: justify;
+}
+
+/* Estilos del modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.Buttons-Container{
+  display: flex;
+  justify-content: space-between;
+}
+.modal-container {
+  background: transparent;
+  padding: 3rem;
+  border-radius: 15px;
+  border: 2px solid #7C7121;
+  width: clamp(350px, 70vw, 700px);
+  /* max-width: 500px; */
+  position: relative;
+  animation: modalAppear 0.3s ease-out;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes modalAppear {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-title {
+  display: flex;
+  color: #7C7121;
+  font-family: 'Inika', sans-serif;
+  font-size: clamp(16px, 3vw, 30px);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.code-input {
+  width: 100%;
+  padding: clamp(0.5rem, 1rem, 2.5rem);
+  margin: 1rem 0;
+  background: transparent;
+  border: 1px solid #7C7121;
+  border-radius: 8px;
+  color: black;
+  font-size: clamp(16px, 3vw, 30px);
+  display: flex;
+  justify-content: space-around;
+}
+
+.code-button {
+  width:clamp(100px, 14vw, 890px);
+  padding: clamp(4px, 1vw, 70px);
+  font-size: clamp(16px, 3vw, 30px);
+  background: #7C7121;
+  color: white;
+  border-radius:15%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.code-button:hover {
+  background: #968b3b;
+  transform: translateY(-2px);
+}
+
+.error-message {
+  color: #ff4d4d;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: clamp(12px, 2vw, 30px);
+}
+
+.responsive-btn-Boletos{
+  width:clamp(100px, 14vw, 800px);
+  padding: clamp(4px, 1vw, 70px);
+  font-size: clamp(16px, 3vw, 30px);
+  background: #7C7121;
+  color: white;
+  border-radius:15%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
