@@ -157,7 +157,7 @@
   .timer{
     width: clamp(280px, 80vw, 1200px); 
     position: relative;
-    
+
   }
 
   .buttons-names{

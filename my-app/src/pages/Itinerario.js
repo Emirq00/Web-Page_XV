@@ -7,37 +7,37 @@ import { motion } from "framer-motion";
 
 const progressItems = [
   {
-    threshold: 16,
+    threshold: 11,
     image: '/ImagenesInvitacion/Misa.png',
     title: 'Misa', 
     description: '17:45 hrs.'
   },
   {
-    threshold: 33,
+    threshold: 28,
     image: '/ImagenesInvitacion/Recepcion.png',
     title: 'Recepción',
     description: '19:30 hrs.'
   },
   {
-    threshold: 50,
+    threshold: 45,
     image: '/ImagenesInvitacion/Cena.png',
     title: 'Cena',
     description: '20:30 hrs.'
   },
   {
-    threshold: 66, 
+    threshold: 61, 
     image: '/ImagenesInvitacion/Vals.png',
     title: 'Vals',
     description: '21:30 hrs.'
   },
   {
-    threshold: 83, 
+    threshold: 78, 
     image: '/ImagenesInvitacion/Baile.png',
     title: 'Baile', 
     description: '22:30 hrs.'
   },
   {
-    threshold: 100, 
+    threshold: 95, 
     image: '/ImagenesInvitacion/FinFiesta.png',
     title: 'Fin de la fiesta', 
     description: '01:30 hrs.'
@@ -54,22 +54,13 @@ const Button = ({ to, children }) => (
     </Link>
   </motion.div>
 );
+
+
 const ProgressBar = () => {
   const [scrollPercent, setScrollPercent] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1025);
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
 
   const adjustedProgressItems = progressItems.map((item, index) => {
-    if (index === progressItems.length - 1 && isMobile) {
+    if (index === progressItems.length - 1) {
       return { ...item, threshold: 95 };
     }
     return item;
@@ -77,11 +68,9 @@ const ProgressBar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      const documentHeight =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const documentHeight = document.documentElement.scrollHeight - 
+                           document.documentElement.clientHeight;
       const scrolled = (scrollTop / documentHeight) * 100;
       setScrollPercent(scrolled);
     };
@@ -90,9 +79,7 @@ const ProgressBar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-
-  const maxBarHeight = isMobile ? 95 : 100;
-  const lineHeight = scrollPercent > maxBarHeight ? maxBarHeight : scrollPercent;
+  const lineHeight = Math.min(scrollPercent, 95);
 
   return (
     <div className="progress-container">
@@ -117,7 +104,6 @@ const ProgressBar = () => {
     </div>
   );
 };
-
 const Itinerario = () => {
   return (
     <div className="Main-page_Itinerario">

@@ -39,8 +39,8 @@ const CountDownTimer = ({targetDate}) =>{
                 <span className="timer"> : {padNumber(timeLeft.seconds || 0)}</span>
             </div>
             <div className="time-box">
-                <span className="imperial-script-regular" style={{fontSize:'4vw', padding:'2vw'}}>Días </span>
-                <span className="imperial-script-regular" style={{fontSize:'4vw', padding:'1vw'}}>Horas </span>
+                <span className="imperial-script-regular"style={{fontSize:'4vw', padding:'1vw'}}>Días </span>
+                <span className="imperial-script-regular"style={{fontSize:'4vw', padding:'1vw'}}>Horas </span>
                 <span className="imperial-script-regular"style={{fontSize:'4vw', padding:'1vw'}}>Minutos </span>
                 <span className="imperial-script-regular"style={{fontSize:'4vw'}}>Segundos</span>
             </div>

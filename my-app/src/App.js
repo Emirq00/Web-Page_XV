@@ -1,4 +1,4 @@
-import React, { StrictMode } from 'react';
+import React, { StrictMode, useState, useEffect} from 'react';
 import CountdownTimer from "./CountDownTimer";
 import './App.css';
 import {BrowserRouter as Router, Routes, Route, Link, href, createBrowserRouter, RouterProvider} from 'react-router-dom'
@@ -9,6 +9,7 @@ import Church from './pages/Misa';
 import Tickets from './pages/Boletos';
 import ScrollToTop from './ScrollToTop';
 import { AnimatePresence } from 'framer-motion';
+import WelcomeModal from './WelcomeModal';
 
 
 const Button = ({ to, children }) => (
@@ -19,6 +20,21 @@ const Button = ({ to, children }) => (
 );
 
 const HomePage = () =>{
+
+  const [showWelcome, setShowWelcome] = useState(true);
+
+  useEffect(() => {
+    // const hasSeenWelcome = localStorage.getItem('hasSeenWelcome');
+    // if (hasSeenWelcome) {
+    //   setShowWelcome(false);
+    // }
+  }, []);
+
+  const handleCloseWelcome = () => {
+    setShowWelcome(false);
+    localStorage.setItem('hasSeenWelcome', 'true');
+  };
+
   const targetDate = "2025-06-28T19:30:00";
 
   const images=[
@@ -31,6 +47,8 @@ const HomePage = () =>{
   return (
       
     <div className="App">
+
+      {showWelcome && <WelcomeModal onClose={handleCloseWelcome} />}
 
       <h1 className='title'>Mis XV años</h1>
       <h1 className='name'>Salma Quezada
