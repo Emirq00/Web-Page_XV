@@ -44,11 +44,6 @@
     transition: transform 0.2s ease;
   }
   
-  .enter-button:hover {
-    background: #cdabec ;
-    transform: scale(1.05);
-  }
-  
   @media(min-width:1025px){
     .modal-content-welcome{
         min-width: 30%;
