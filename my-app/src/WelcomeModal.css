@@ -29,8 +29,8 @@
   }
   
   .enter-button {
-    background: transparent;
-    color: white;
+    background: none;
+    color: none;
     /* background-color: black; */
     border: none;
     padding: 15px 40px;
@@ -38,7 +38,6 @@
     /* font-size: 100px; */
     width: 80%;
     height: 80%;
-    cursor: pointer;
     margin-top: 2rem;
     position: relative;
     outline: none;
