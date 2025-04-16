@@ -41,7 +41,7 @@
     cursor: pointer;
     margin-top: 2rem;
     position: relative;
-    transition: transform 0.2s ease;
+    /* transition: transform 0.2s ease; */
   }
   
   @media(min-width:1025px){

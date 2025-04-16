@@ -1,4 +1,4 @@
-import React, { StrictMode, useState, useEffect} from 'react';
+import React, { StrictMode, useState, useEffect, useRef} from 'react';
 import CountdownTimer from "./CountDownTimer";
 import './App.css';
 import {BrowserRouter as Router, Routes, Route, Link, href, createBrowserRouter, RouterProvider} from 'react-router-dom'
@@ -13,6 +13,59 @@ import WelcomeModal from './WelcomeModal';
 
 
 let welcomeShown = false;
+
+const BackgroundMusic = () => {
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [showWelcome, setShowWelcome]=useState(true);
+
+  const toggleMusic = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play().catch(error => {
+          console.log("Error reproduciendo el audio:", error);
+        });
+      }
+      setIsPlaying(!isPlaying);
+    }
+  }
+
+    const handleModalClose = () => {
+      setShowWelcome(false);
+      if (!isPlaying) {
+        toggleMusic();
+      }
+  };
+
+  return (
+    <div>
+      <>
+      {showWelcome && <WelcomeModal onClose={handleModalClose}/>}
+
+      <audio ref={audioRef} src="/Mac_DeMarco.mp3" loop />
+      <button 
+        onClick={toggleMusic}
+        style={{
+          position: 'fixed',
+          bottom: '20px',
+          right: '20px',
+          zIndex: 1000,
+          padding: '10px 20px',
+          backgroundColor: '#fff',
+          border: '1px solid #ccc',
+          borderRadius: '5px',
+          cursor: 'pointer'
+        }}
+      >
+        {isPlaying ? 'Pausar Música' : 'Reproducir Música'}
+      </button>
+    </>
+    </div>
+    
+  );
+};
 
 const Button = ({ to, children }) => (
   
@@ -125,6 +178,7 @@ const HomePage = () =>{
 function App() {
   return(
     <Router>
+      <BackgroundMusic/>
       <ScrollToTop/>
       <AnimatePresence mode='wait'>
       <Routes>
