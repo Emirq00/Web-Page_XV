@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import './Boletos.css'
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
-import { label } from "framer-motion/client";
 
 const message = 'Su majestad Salma, solicita su presencia en la celebración de su XV aniversario. Una noche mágica en su honor.';
 
@@ -54,7 +53,7 @@ const CodeInput = ({ setSelectedOption, closeModal }) => {
     { value: '105564', label: 'Genaro Serrano González y Esposa', boletos: '2 adultos', mensaje:message},
     { value: '975987', label: 'Victoria Ortiz y Familia', boletos: '2 adultos y 1 niño', mensaje:message},
     { value: '100192', label: 'Adrián Ortiz Barrera y acompañante', boletos: '2 adultos', mensaje:message},
-    { value: '776152', label: 'Santiago Garcia Chávez y Familia', boletos: '3 adultos', mensaje:message},
+    { value: '776152', label: 'Santiago García Chávez y Familia', boletos: '3 adultos', mensaje:message},
     { value: '432511', label: 'Francisco Luna Mora y acompañante', boletos: '2 adultos', mensaje:message},
     { value: '990912', label: 'Fernanda Rubí Sánchez Olivares y David Alberto Sánchez Morales', boletos: '2 adultos', mensaje:message},
     { value: '541768', label: 'Esmeralda Itzel Sánchez Olivares y Diego Alexei Meixueiro', boletos:'2 adultos', mensaje:message},
@@ -63,7 +62,18 @@ const CodeInput = ({ setSelectedOption, closeModal }) => {
     { value: '889237', label: 'Ángel Román Olivares Esquivel', boletos:'1 adulto', mensaje: message},
     { value: '278728', label: 'Alejandro Olivares Ortiz', boletos: '1 adulto', mensaje:message},
     { value: '398909', label: 'Virgina Ortiz Barrera', boletos: '1 adulto', mensaje:message},
-    { value: '343930', label: 'Carmen Sánchez Guerra y Familia', boletos: '3 adultos', mensaje:message},
+    { value: '343929', label: 'Carmen Sánchez Guerra y Familia', boletos: '3 adultos', mensaje:message},
+    { value: 'amaite machuca', label: 'Amaite Machuca', boletos: '3 adultos', mensaje:message},
+    { value: 'cecilia hernández', label: 'Cecilia Hernández', boletos:'1 adulto', mensaje:message},
+    { value: 'ariana castillo', label: 'Ariana Castillo', boletos: '1 adulto', mensaje:message},
+    { value: 'diana vázquez', label: 'Diana Vázquez', boletos: '1 adulto', mensaje:message},
+    { value: 'andrea ivañez', label: 'Andrea Ivañez', boletos: '1 adulto', mensaje:message},
+    { value: 'jonathan chávez', label: 'Jonathan Chávez', boletos: '1 adulto', mensaje: message},
+    { value: 'pablo ruiz', label: 'Pablo Ruiz', boletos: '1 adulto', mensaje:message},
+    { value: 'rocha solano', label: 'Natalia Rocha Solano y Ximena Rocha Solano', boletos:'2 adultos', mensaje:message},
+    { value: 'nifel vázquez', label: 'Nifel Vázquez', boletos: '1 adulto', mensaje:message},
+    { value: 'ximena arteaga', label: 'Ximena Artega', boletos: '1 adulto', mensaje:message},
+    { value: 'yaretzi sánchez', label: 'Yaretzi Sánchez', boletos: '1 adulto', mensaje:message},
 
   ];
 
@@ -93,7 +103,6 @@ const CodeInput = ({ setSelectedOption, closeModal }) => {
           type="text"
           value={code}
           onChange={(e) => setCode(e.target.value)}
-          // placeholder="Ejemplo: opcion1"
           className="code-input"
           autoFocus
         />

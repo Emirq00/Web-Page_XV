@@ -33,13 +33,13 @@ const BackgroundMusic = () => {
   }
 
   const PlayIcon = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
       <polygon points="8,5 19,12 8,19" />
     </svg>
   );
 
   const PauseIcon = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
       <rect x="6" y="5" width="4" height="14" />
       <rect x="14" y="5" width="4" height="14" />
     </svg>

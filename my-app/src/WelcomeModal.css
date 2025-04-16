@@ -23,7 +23,7 @@
     min-width: 90%;
     height: 100vh;
     position: relative;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); */
     display: flex;
     justify-content: center;
   }
@@ -31,17 +31,14 @@
   .enter-button {
     background: none;
     color: none;
-    /* background-color: black; */
     border: none;
     padding: 15px 40px;
     border-radius: 30px;
-    /* font-size: 100px; */
     width: 80%;
     height: 80%;
     margin-top: 2rem;
     position: relative;
     outline: none;
-    /* transition: transform 0.2s ease; */
   }
   
   @media(min-width:1025px){
