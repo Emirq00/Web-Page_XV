@@ -12,6 +12,8 @@ import { AnimatePresence } from 'framer-motion';
 import WelcomeModal from './WelcomeModal';
 
 
+let welcomeShown = false;
+
 const Button = ({ to, children }) => (
   
   <Link to ={to} className='responsive-btn'>
@@ -21,18 +23,17 @@ const Button = ({ to, children }) => (
 
 const HomePage = () =>{
 
-  const [showWelcome, setShowWelcome] = useState(true);
+  const [showWelcome, setShowWelcome] = useState(false);
 
   useEffect(() => {
-    const hasSeenWelcome = localStorage.getItem('hasSeenWelcome');
-    if (hasSeenWelcome) {
-      setShowWelcome(false);
+    if (!welcomeShown) {
+      setShowWelcome(true);
+      welcomeShown = true;
     }
   }, []);
 
   const handleCloseWelcome = () => {
     setShowWelcome(false);
-    localStorage.setItem('hasSeenWelcome', 'true');
   };
 
   const targetDate = "2025-06-28T19:30:00";

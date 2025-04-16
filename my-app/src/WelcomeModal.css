@@ -13,25 +13,34 @@
   }
   
   .modal-content-welcome {
-    background: #abecbc;
     padding: 2.5rem;
+    background-image: url('/public/ImagenesInvitacion/icono-sobre.png');
+    background-size: cover;
+    background-position: center;
     border-radius: 20px;
     text-align: center;
-    max-width: 90%;
-    width: 600px;
+    /* width: clamp(200px, 700px, 800px); */
+    min-width: 90%;
+    height: 100vh;
     position: relative;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
   }
   
   .enter-button {
-    background: #cdabec ;
+    background: transparent;
     color: white;
-    border: none;
+    /* background-color: black; */
+    border: transparent;
     padding: 15px 40px;
     border-radius: 30px;
-    font-size: 1.2rem;
+    /* font-size: 100px; */
+    width: 80%;
+    height: 80%;
     cursor: pointer;
     margin-top: 2rem;
+    position: relative;
     transition: transform 0.2s ease;
   }
   
@@ -40,10 +49,8 @@
     transform: scale(1.05);
   }
   
-  
-  body.modal-open {
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-    height: 100%;
+  @media(min-width:1025px){
+    .modal-content-welcome{
+        min-width: 30%;
+    }
   }
