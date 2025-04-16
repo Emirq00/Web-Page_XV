@@ -57,7 +57,7 @@ const BackgroundMusic = () => {
       <>
       {showWelcome && <WelcomeModal onClose={handleModalClose}/>}
 
-      <audio ref={audioRef} src="/Mac_DeMarco.mp3" loop />
+      <audio ref={audioRef} src="/Background_Song.mp3" loop />
       <button 
         onClick={toggleMusic}
         style={{
@@ -88,18 +88,6 @@ const Button = ({ to, children }) => (
 
 const HomePage = () =>{
 
-  const [showWelcome, setShowWelcome] = useState(false);
-
-  useEffect(() => {
-    if (!welcomeShown) {
-      setShowWelcome(true);
-      welcomeShown = true;
-    }
-  }, []);
-
-  const handleCloseWelcome = () => {
-    setShowWelcome(false);
-  };
 
   const targetDate = "2025-06-28T19:30:00";
 
@@ -113,8 +101,6 @@ const HomePage = () =>{
   return (
       
     <div className="App">
-
-      {showWelcome && <WelcomeModal onClose={handleCloseWelcome} />}
 
       <h1 className='title'>Mis XV años</h1>
       <h1 className='name'>Salma Quezada

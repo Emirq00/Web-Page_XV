@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './Boletos.css'
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
+import { label } from "framer-motion/client";
 
 const message = 'Su majestad Salma, solicita su presencia en la celebración de su XV aniversario. Una noche mágica en su honor.';
 
@@ -31,19 +32,39 @@ const CodeInput = ({ setSelectedOption, closeModal }) => {
   const [error, setError] = useState('');
 
   const options = [
-    { value: 'opcion1', label: 'Familia Pérez Quezada', boletos: '4 personas', mensaje: message },
-    { value: 'opcion2', label: 'Familia Santoyo Quezada', boletos: '4 personas', mensaje: message },
-    { value: 'opcion3', label: 'Familia Trujillo Quezada', boletos: '5 personas', mensaje: message },
-    { value: 'opcion4', label: 'Familia Quezada Romero', boletos: '5 personas', mensaje: message },
-    { value: 'opcion5', label: 'Familia Lopez Quezada', boletos: '6 personas', mensaje: message },
-    { value: 'opcion6', label: 'Familia Gómez Garza', boletos: '4 personas', mensaje: message },
-    { value: 'opcion7', label: 'Familia Rebollo Olivares', boletos: '5 personas y 1 niño', mensaje: message },
-    { value: 'opcion8', label: 'Familia Sánchez Olivares', boletos: '7 personas', mensaje: message },
-    { value: 'opcion9', label: 'Familia Olivares Armenta', boletos: '4 personas', mensaje: message },
-    { value: 'opcion10', label: 'Familia Quezada González', boletos: '2 personas', mensaje: message },
-    { value: 'opcion11', label: 'Familia Alvarado Ortiz', boletos: '7 personas', mensaje: message },
-    { value: 'opcion12', label: 'Familia Olivares García', boletos: '4 personas y 1 niño', mensaje: message },
-    { value: 'opcion13', label: 'Familia Pérez González', boletos: '7 personas y 4 niños', mensaje: message },
+    { value: '019380', label: 'Familia Pérez Quezada', boletos: '4 adultos', mensaje: message },
+    { value: '122182', label: 'Familia Santoyo Quezada', boletos: '4 adultos', mensaje: message },
+    { value: '192054', label: 'Familia Trujillo Quezada', boletos: '3 adultos y 2 niños', mensaje: message },
+    { value: '123951', label: 'Familia Quezada Romero', boletos: '5 adultos', mensaje: message },
+    { value: '092319', label: 'Familia López Quezada', boletos: '6 adultos', mensaje: message },
+    { value: '163846', label: 'Familia Gómez Garza', boletos: '4 adultos', mensaje: message },
+    { value: '001924', label: 'Familia Rebollo Olivares', boletos: '4 adultos, 1 niño y 1 bebé', mensaje: message },
+    { value: '122276', label: 'Familia Sánchez Olivares', boletos: '2 adultos y 1 niño', mensaje: message },
+    { value: '091280', label: 'Familia Olivares Armenta', boletos: '4 adultos', mensaje: message },
+    { value: '118826', label: 'Troadio Quezada García y Guadalupe González Castro', boletos: '2 adultos', mensaje: message },
+    { value: '010192', label: 'Familia Alvarado Ortiz', boletos: '6 adultos y 1 niño', mensaje: message },
+    { value: '817263', label: 'Familia Olivares García', boletos: '3 adultos, 1 niño y 1 bebé', mensaje: message },
+    { value: '716491', label: 'Familia Pérez González', boletos: '2 adultos', mensaje: message },
+    { value: '998123', label: 'Alejandra Pérez González y Familia', boletos: '2 adultos y 2 niños', mensaje:message},
+    { value: '246710', label: 'Angélica Pérez González y Familia', boletos: '2 adultos y 1 niño', mensaje:message},
+    { value: '014251', label: 'Carmen Pérez González y Familia', boletos: '1 adulto y 1 niño', mensaje:message},
+    { value: '121909', label: 'Jose Lucio García Chávez y Esposa', boletos: '2 adultos', mensaje:message},
+    { value: '671651', label: 'Martin Serrano González y acompañante', boletos: '2 adultos', mensaje:message},
+    { value: '980981', label: 'Adriana Serrano González y acompañante', boletos: '2 adultos', mensaje:message},
+    { value: '105564', label: 'Genaro Serrano González y Esposa', boletos: '2 adultos', mensaje:message},
+    { value: '975987', label: 'Victoria Ortiz y Familia', boletos: '2 adultos y 1 niño', mensaje:message},
+    { value: '100192', label: 'Adrián Ortiz Barrera y acompañante', boletos: '2 adultos', mensaje:message},
+    { value: '776152', label: 'Santiago Garcia Chávez y Familia', boletos: '3 adultos', mensaje:message},
+    { value: '432511', label: 'Francisco Luna Mora y acompañante', boletos: '2 adultos', mensaje:message},
+    { value: '990912', label: 'Fernanda Rubí Sánchez Olivares y David Alberto Sánchez Morales', boletos: '2 adultos', mensaje:message},
+    { value: '541768', label: 'Esmeralda Itzel Sánchez Olivares y Diego Alexei Meixueiro', boletos:'2 adultos', mensaje:message},
+    { value: '251629', label: 'Familia Olmos Nieves', boletos: '7 adultos', mensaje:message},
+    { value: '182531', label: 'Armando Olivares Ortiz y acompañante', boletos: '2 adultos', mensaje: message},
+    { value: '889237', label: 'Ángel Román Olivares Esquivel', boletos:'1 adulto', mensaje: message},
+    { value: '278728', label: 'Alejandro Olivares Ortiz', boletos: '1 adulto', mensaje:message},
+    { value: '398909', label: 'Virgina Ortiz Barrera', boletos: '1 adulto', mensaje:message},
+    { value: '343930', label: 'Carmen Sánchez Guerra y Familia', boletos: '3 adultos', mensaje:message},
+
   ];
 
   const handleSubmit = (e) => {
