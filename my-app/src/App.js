@@ -68,7 +68,9 @@ const BackgroundMusic = () => {
           padding: 'clamp(5px, 10px, 30px)',
           backgroundColor: '#7C7121',
           borderRadius: '50%',
-          cursor: 'pointer'
+          cursor: 'pointer',
+          outline:'none', 
+          border:'none',
         }}
       >
          {isPlaying ? <PauseIcon /> : <PlayIcon />}
