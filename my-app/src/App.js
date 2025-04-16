@@ -32,6 +32,19 @@ const BackgroundMusic = () => {
     }
   }
 
+  const PlayIcon = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <polygon points="8,5 19,12 8,19" />
+    </svg>
+  );
+
+  const PauseIcon = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <rect x="6" y="5" width="4" height="14" />
+      <rect x="14" y="5" width="4" height="14" />
+    </svg>
+  );
+
     const handleModalClose = () => {
       setShowWelcome(false);
       if (!isPlaying) {
@@ -50,16 +63,15 @@ const BackgroundMusic = () => {
         style={{
           position: 'fixed',
           bottom: '20px',
-          right: '20px',
+          left: '20px',
           zIndex: 1000,
-          padding: '10px 20px',
-          backgroundColor: '#fff',
-          border: '1px solid #ccc',
-          borderRadius: '5px',
+          padding: 'clamp(5px, 10px, 30px)',
+          backgroundColor: '#7C7121',
+          borderRadius: '50%',
           cursor: 'pointer'
         }}
       >
-        {isPlaying ? 'Pausar Música' : 'Reproducir Música'}
+         {isPlaying ? <PauseIcon /> : <PlayIcon />}
       </button>
     </>
     </div>
