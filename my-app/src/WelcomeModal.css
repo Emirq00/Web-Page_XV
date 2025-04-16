@@ -20,25 +20,12 @@
     border-radius: 20px;
     text-align: center;
     /* width: clamp(200px, 700px, 800px); */
-    min-width: 90%;
+    min-width: 95%;
     height: 100vh;
     position: relative;
     /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); */
     display: flex;
     justify-content: center;
-  }
-  
-  .enter-button {
-    background: none;
-    color: none;
-    border: none;
-    padding: 15px 40px;
-    border-radius: 30px;
-    width: 80%;
-    height: 80%;
-    margin-top: 2rem;
-    position: relative;
-    outline: none;
   }
   
   @media(min-width:1025px){

@@ -10,18 +10,18 @@ const WelcomeModal = ({ onClose }) => {
 
   return (
     <div className="modal-overlay-welcome">
-      <motion.div
+      {/* <motion.div
         className="modal-content-welcome"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.8, opacity: 0 }}
         transition={{ type: 'spring', stiffness: 100 }}
-      >
-        <button className='enter-button' onClick={onClose}>
-
+      > */}
+        <button className='modal-content-welcome' onClick={onClose}>
+          {/* <img src='/public/ImagenesInvitacion/icono-sobre.png'/> */}
         </button>
 
-      </motion.div>
+      {/* </motion.div> */}
     </div>
   );
 };
