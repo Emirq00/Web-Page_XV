@@ -90,7 +90,7 @@ const Misa = () =>{
                 variants={textVariants}
                 transition={{ delay: 0.3 }}
                 >
-                Cuándo: 28 de junio del 2025, 17:45 hrs.
+                Día y hora: 28 de junio del 2025, 17:45 hrs.
               </motion.p>
 
               <motion.p 

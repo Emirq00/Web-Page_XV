@@ -89,7 +89,7 @@ const Ubicacion = () => {
           variants={textVariants}
           transition={{ delay: 0.3 }}
         >
-          Cuándo: 28 de junio del 2025, 19:30 hrs.
+          Día y hora: 28 de junio del 2025, 19:30 hrs.
         </motion.p>
         
         <motion.p 

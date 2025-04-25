@@ -14,6 +14,7 @@ import WelcomeModal from './WelcomeModal';
 
 let welcomeShown = false;
 
+
 const BackgroundMusic = () => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -94,9 +95,21 @@ const HomePage = () =>{
   const targetDate = "2025-06-28T19:30:00";
 
   const images=[
-    "/ImagenesInvitacion/IMG_1908.jpg",
-    "/ImagenesInvitacion/IMG_2474.jpg",
-    "/ImagenesInvitacion/IMG_2512.jpg"
+    "/FotosSalma/0.jpg",
+    "/FotosSalma/1.jpg",
+    "/FotosSalma/2.jpg",
+    "/FotosSalma/3.JPG",
+    "/FotosSalma/4.JPG",
+    "/FotosSalma/5.JPG",
+    "/FotosSalma/6.JPG",
+    "/FotosSalma/7.JPG",
+    "/FotosSalma/8.JPG",
+    "/FotosSalma/9.jpg",
+    "/FotosSalma/10.jpg",
+    "/FotosSalma/11_1.jpeg",
+    "/FotosSalma/12.jpeg",
+    "/FotosSalma/13_1.jpeg",
+    "/FotosSalma/14_1.jpeg"
   ];
 
 

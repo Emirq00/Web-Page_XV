@@ -78,19 +78,22 @@
 
   .sliding-image {
     position: absolute;
-    width: 30%;
-    height: 30%;
+    width: 20%;
+    height: 15%;
+    left:83.39%;
+    top:52%;
     clip-path: inset(0 0 100% 0);
     animation-name: slide, reveal;
-    animation-duration: 12s, 12s;
+    animation-duration: 50s, 50s;
     animation-timing-function: linear, linear;
-    animation-delay: calc(var(--i)*4s), calc(var(--i)*4s);
+    animation-delay: calc(var(--i)*3.333s);
     animation-iteration-count: infinite, infinite;
     animation-fill-mode: backwards, backwards;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     z-index: 0;
-    aspect-ratio: 1/1;
+    /* aspect-ratio: 1/1; */
+    border-radius: 10%;
     will-change: transform, opacity;
   }
   
@@ -99,11 +102,11 @@
     0%,100% {
       clip-path: inset(0 0 100% 0); 
     }
-    5%{
+    3%{
       clip-path: inset(0 0 20% 0); 
     }
-    7%{
-      clip-path: inset(0 0 2% 0); 
+    4%{
+      clip-path: inset(0 0 0% 0); 
     }
     70% {
       clip-path: inset(0 0 0 0);
@@ -115,7 +118,7 @@
       transform: translate(-220%, 335%);
     }
     100%{
-      transform: translate(-200%, -850%);
+      transform: translate(-200%, -2200%);
     }
   }
 
