@@ -184,7 +184,7 @@ const HomePage = () =>{
         </div>
       </div>
 
-      <h1 className='Font1-Prayer'>Confirma tu asistencia lo antes posible</h1>
+      <h1 className='Font1-Prayer'>Por favor, confirma tu asistencia lo antes posible</h1>
 
     </div>
   );
