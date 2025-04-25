@@ -109,7 +109,10 @@ const HomePage = () =>{
     "/FotosSalma/11_1.jpeg",
     "/FotosSalma/12.jpeg",
     "/FotosSalma/13_1.jpeg",
-    "/FotosSalma/14_1.jpeg"
+    "/FotosSalma/14_1.jpeg",
+    "/FotosSalma/15.jpeg",
+    "/FotosSalma/16.jpeg",
+    "/FotosSalma/17.jpeg",
   ];
 
 
