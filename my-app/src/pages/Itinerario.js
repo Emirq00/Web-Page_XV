@@ -20,27 +20,27 @@ const progressItems = [
   },
   {
     threshold: 45,
-    image: '/ImagenesInvitacion/Cena.png',
-    title: 'Cena',
+    image: '/ImagenesInvitacion/Baile.png',
+    title: 'Baile',
     description: '20:30 hrs.'
   },
   {
     threshold: 61, 
-    image: '/ImagenesInvitacion/Vals.png',
-    title: 'Vals',
+    image: '/ImagenesInvitacion/Cena.png',
+    title: 'Cena',
     description: '21:30 hrs.'
   },
   {
     threshold: 78, 
-    image: '/ImagenesInvitacion/Baile.png',
-    title: 'Baile', 
+    image: '/ImagenesInvitacion/Vals.png',
+    title: 'Vals', 
     description: '22:30 hrs.'
   },
   {
     threshold: 95, 
     image: '/ImagenesInvitacion/FinFiesta.png',
     title: 'Fin de la fiesta', 
-    description: '01:30 hrs.'
+    description: '02:00 hrs.'
   },
 ];
 
