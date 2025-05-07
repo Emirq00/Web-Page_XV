@@ -41,7 +41,7 @@ const CodeInput = ({ setSelectedOption, closeModal }) => {
     { value: '122276', label: 'Familia Sánchez Olivares', boletos: '2 adultos y 1 niño', mensaje: message },
     { value: '091280', label: 'Familia Olivares Armenta', boletos: '4 adultos', mensaje: message },
     { value: '118826', label: 'Troadio Quezada García y Guadalupe González Castro', boletos: '2 adultos', mensaje: message },
-    { value: '010192', label: 'Familia Alvarado Ortiz', boletos: '6 adultos y 1 niño', mensaje: message },
+    { value: '010192', label: 'Familia Alvarado Ortiz', boletos: '7 adultos y 1 niño', mensaje: message },
     { value: '817263', label: 'Familia Olivares García', boletos: '3 adultos, 1 niño y 1 bebé', mensaje: message },
     { value: '716491', label: 'Familia Pérez González', boletos: '2 adultos', mensaje: message },
     { value: '998123', label: 'Alejandra Pérez González y Familia', boletos: '2 adultos y 2 niños', mensaje:message},
